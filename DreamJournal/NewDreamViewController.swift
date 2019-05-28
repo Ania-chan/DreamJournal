@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  NewDreamViewController.swift
 //  DreamJournal
 //
 //  Created by Anna Nakayama on 2019/05/28.
@@ -8,17 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class NewDreamViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: Properties
-
+    @IBOutlet weak var dreamText: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+//        dreamText.delegate = self
     }
     
     //MARK: Actions
+    
 
 
 }
-

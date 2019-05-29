@@ -8,19 +8,32 @@
 
 import UIKit
 
-class NewDreamViewController: UIViewController, UITextFieldDelegate {
+class NewDreamViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
-    //MARK: Properties
+//    var dreamList: DreamsList
+    @IBOutlet weak var dreamTitle: UITextField!
     @IBOutlet weak var dreamText: UITextView!
+    
+//    @IBAction func addDream(_ sender: Any) {
+//        let newRowIndex = dreamList.dreams.count
+//        _ = dreamList.addDream()
+//        
+//        let indexPath = IndexPath(row: newRowIndex, section: 0)
+//        let indexPaths = [indexPath]
+//        tableView.insertRows(at: indexPaths, with: .automatic)
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        dreamText.delegate = self
+        dreamTitle.delegate = self
+        dreamText.delegate = self
     }
     
-    //MARK: Actions
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
+    }
     
-
 
 }

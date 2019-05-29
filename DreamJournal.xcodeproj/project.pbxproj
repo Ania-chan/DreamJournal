@@ -14,6 +14,8 @@
 		815CB7F3229CD5DC0062380A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815CB7F1229CD5DC0062380A /* LaunchScreen.storyboard */; };
 		815CB7FB229CE1700062380A /* NewDreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815CB7FA229CE1700062380A /* NewDreamViewController.swift */; };
 		815CB7FD229CF5B50062380A /* DreamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815CB7FC229CF5B50062380A /* DreamListViewController.swift */; };
+		81FB7F22229E18630074A6B3 /* DreamItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FB7F21229E18630074A6B3 /* DreamItem.swift */; };
+		81FB7F26229E21FD0074A6B3 /* DreamsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FB7F25229E21FD0074A6B3 /* DreamsList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		815CB7F4229CD5DC0062380A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		815CB7FA229CE1700062380A /* NewDreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDreamViewController.swift; sourceTree = "<group>"; };
 		815CB7FC229CF5B50062380A /* DreamListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamListViewController.swift; sourceTree = "<group>"; };
+		81FB7F21229E18630074A6B3 /* DreamItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamItem.swift; sourceTree = "<group>"; };
+		81FB7F25229E21FD0074A6B3 /* DreamsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamsList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				815CB7E8229CD5DB0062380A /* AppDelegate.swift */,
 				815CB7EA229CD5DB0062380A /* ViewController.swift */,
 				815CB7FA229CE1700062380A /* NewDreamViewController.swift */,
+				81FB7F21229E18630074A6B3 /* DreamItem.swift */,
+				81FB7F25229E21FD0074A6B3 /* DreamsList.swift */,
 				815CB7EC229CD5DB0062380A /* Main.storyboard */,
 				815CB7EF229CD5DC0062380A /* Assets.xcassets */,
 				815CB7FC229CF5B50062380A /* DreamListViewController.swift */,
@@ -144,7 +150,9 @@
 				815CB7FD229CF5B50062380A /* DreamListViewController.swift in Sources */,
 				815CB7EB229CD5DB0062380A /* ViewController.swift in Sources */,
 				815CB7E9229CD5DB0062380A /* AppDelegate.swift in Sources */,
+				81FB7F22229E18630074A6B3 /* DreamItem.swift in Sources */,
 				815CB7FB229CE1700062380A /* NewDreamViewController.swift in Sources */,
+				81FB7F26229E21FD0074A6B3 /* DreamsList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

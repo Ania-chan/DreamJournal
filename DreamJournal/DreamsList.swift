@@ -10,16 +10,17 @@ import Foundation
 
 class DreamsList {
     var dreams: [DreamItem] = []
+    
     init() {
         let firstDream = DreamItem()
         firstDream.text = "something"
         dreams.append(firstDream)
     }
-    
+
     func addDream() -> DreamItem {
-        let item = DreamItem()
-        item.text = "random dream"
-        dreams.append(item)
-        return item
+        let dream = DreamItem()
+        dream.text = "random dream"
+        dreams.append(dream)
+        return dream
     }
 }

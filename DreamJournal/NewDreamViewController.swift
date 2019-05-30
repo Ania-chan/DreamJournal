@@ -7,33 +7,89 @@
 //
 
 import UIKit
+import os.log
 
-class NewDreamViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
+class NewDreamViewController: UIViewController, UITextViewDelegate {
     
-//    var dreamList: DreamsList
-    @IBOutlet weak var dreamTitle: UITextField!
+    //MARK: Output
     @IBOutlet weak var dreamText: UITextView!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
     
-//    @IBAction func addDream(_ sender: Any) {
-//        let newRowIndex = dreamList.dreams.count
-//        _ = dreamList.addDream()
-//        
-//        let indexPath = IndexPath(row: newRowIndex, section: 0)
-//        let indexPaths = [indexPath]
-//        tableView.insertRows(at: indexPaths, with: .automatic)
-//    }
+    @IBAction func cancel(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func done(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dreamTitle.delegate = self
-        dreamText.delegate = self
+        navigationItem.largeTitleDisplayMode = .never
+        
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+                    // Hide the keyboard.
+                    textField.resignFirstResponder()
+                    return true
+                }
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // Hide the keyboard.
-        textField.resignFirstResponder()
-        return true
+    override func viewWillAppear(_ animated: Bool) {
+        dreamText.becomeFirstResponder()
     }
-    
-
 }
+
+//extension NewDreamViewController: UITextViewDelegate {
+//    
+//    func textFieldShouldReturn(_ textField: UITextView) -> Bool {
+//        textField.resignFirstResponder()
+//        return false
+//    }
+//    
+//}
+
+    
+//    var dream: DreamItem?
+    
+    //MARK: Navigation
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        super.prepare(for: segue, sender: sender)
+//
+//        guard let button = sender as? UIBarButtonItem, button === saveButton else {
+//            os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
+//            return
+//        }
+//        let dreamInput = dreamText.text ?? ""
+//        dream = DreamItem()
+//    }
+
+
+
+
+
+
+
+    //MARK: Actions
+    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//    }
+//
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        // Hide the keyboard.
+//        textField.resignFirstResponder()
+//        return true
+//    }
+//
+//
+//}
+//
+//extension NewDreamViewController: UITextViewDelegate {
+//
+//    func textFieldShouldReturn(_ dreamText: UITextView) -> Bool {
+//        dreamText.resignFirstResponder()
+//        return false
+//    }
+//
+//}

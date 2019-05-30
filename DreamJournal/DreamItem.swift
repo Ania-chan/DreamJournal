@@ -10,4 +10,11 @@ import Foundation
 
 class DreamItem {
     var text = ""
+    
+//    init?(text: String) {
+//        if text.isEmpty {
+//            return nil
+//        }
+//        self.text = text
+//    }
 }

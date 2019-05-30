@@ -47,6 +47,7 @@
 		815CB7DC229CD5DB0062380A = {
 			isa = PBXGroup;
 			children = (
+				81FB7F35229FE2600074A6B3 /* README.md */,
 				815CB7E7229CD5DB0062380A /* DreamJournal */,
 				815CB7E6229CD5DB0062380A /* Products */,
 			);
@@ -73,7 +74,6 @@
 				815CB7FC229CF5B50062380A /* DreamListViewController.swift */,
 				81FB7F36229FED5F0074A6B3 /* ChecklistTableViewCell.swift */,
 				815CB7F4229CD5DC0062380A /* Info.plist */,
-				81FB7F35229FE2600074A6B3 /* README.md */,
 			);
 			path = DreamJournal;
 			sourceTree = "<group>";

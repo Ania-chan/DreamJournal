@@ -13,6 +13,7 @@ class DreamListViewController: UITableViewController {
     var dreamList: DreamsList
     
     @IBAction func addDream(_ sender: Any) {
+        
         let newRowIndex = dreamList.dreams.count
         _ = dreamList.addDream()
 
@@ -21,13 +22,18 @@ class DreamListViewController: UITableViewController {
         tableView.insertRows(at: indexPaths, with: .automatic)
     }
     
-//    @IBAction func unwindToDreamList(sender: UIStoryboardSegue) {
-//        if let sourceViewController = sender.source as? NewDreamViewController, let dream = sourceViewController.dream {
-//            let newIndexPath = IndexPath(row: dreamList.dreams.count, section: 0)
-//            dreamList.dreams.append(dream)
-//
-//        }
-//    }
+    @IBAction func deleteItems(_ sender: Any) {
+        if let selectedRows = tableView.indexPathsForSelectedRows {
+            var items = [DreamItem]()
+            for indexPath in selectedRows {
+                items.append(dreamList.dreams[indexPath.row])
+            }
+            dreamList.remove(items: items)
+            tableView.beginUpdates()
+            tableView.deleteRows(at: selectedRows, with: .automatic)
+            tableView.endUpdates()
+        }
+    }
     
     required init?(coder aDecoder: NSCoder) {
         dreamList = DreamsList()
@@ -36,8 +42,14 @@ class DreamListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.leftBarButtonItem = editButtonItem
+        tableView.allowsMultipleSelectionDuringEditing = true
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: true)
+        tableView.setEditing(tableView.isEditing, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,6 +70,11 @@ class DreamListViewController: UITableViewController {
         tableView.deleteRows(at: indexPaths, with: .automatic)
     }
     
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        dreamList.move(item: dreamList.dreams[sourceIndexPath.row], to: destinationIndexPath.row)
+        tableView.reloadData()
+    }
+    
     func configureText(for cell: UITableViewCell, with item: DreamItem) {
         if let label = cell.viewWithTag(1000) as? UILabel {
             label.text = item.text
@@ -69,6 +86,15 @@ class DreamListViewController: UITableViewController {
             if let addItemViewController = segue.destination as? AddDreamTableViewController {
                 addItemViewController.delegate = self
                 addItemViewController.dreamList = dreamList
+            }
+        } else if segue.identifier == "EditDreamSegue" {
+            if let addItemViewController = segue.destination as? AddDreamTableViewController {
+                if let cell = sender as? UITableViewCell,
+                    let indexPath = tableView.indexPath(for: cell) {
+                    let item = dreamList.dreams[indexPath.row]
+                    addItemViewController.dreamToEdit = item
+                    addItemViewController.delegate = self
+                }
             }
         }
     }
@@ -83,11 +109,20 @@ extension DreamListViewController: AddItemViewControllerDelegate {
     
     func addItemViewController(_ controller: AddDreamTableViewController, didFinishAdding item: DreamItem) {
         navigationController?.popViewController(animated: true)
-        let rowIndex = dreamList.dreams.count
-        dreamList.dreams.append(item)
+        let rowIndex = dreamList.dreams.count - 1
         let indexPath = IndexPath(row: rowIndex, section: 0)
         let indexPaths = [indexPath]
         tableView.insertRows(at: indexPaths, with: .automatic)
+    }
+    
+    func addItemViewController(_ controller: AddDreamTableViewController, didFinishEditing item: DreamItem) {
+        if let index = dreamList.dreams.firstIndex(of: item) {
+            let indexPath = IndexPath(row: index, section: 0)
+            if let cell = tableView.cellForRow(at: indexPath) {
+                configureText(for: cell, with: item)
+            }
+        }
+        navigationController?.popViewController(animated: true)
     }
     
     

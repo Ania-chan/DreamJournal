@@ -11,16 +11,27 @@ import Foundation
 class DreamsList {
     var dreams: [DreamItem] = []
     
-    init() {
-        let firstDream = DreamItem()
-        firstDream.text = "something"
-        dreams.append(firstDream)
-    }
 
     func addDream() -> DreamItem {
         let dream = DreamItem()
-        dream.text = "random dream"
+        dream.text = "dream"
         dreams.append(dream)
         return dream
+    }
+    
+    func move(item: DreamItem, to index: Int) {
+        guard let currentIndex = dreams.firstIndex(of: item) else {
+            return
+        }
+        dreams.remove(at: currentIndex)
+        dreams.insert(item, at: index)
+    }
+    
+    func remove(items: [DreamItem]) {
+        for item in items {
+            if let index = dreams.firstIndex(of: item) {
+                dreams.remove(at: index)
+            }
+        }
     }
 }

@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="DreamItem" rowHeight="100" id="tEl-j0-rGd">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="DreamItem" rowHeight="100" id="tEl-j0-rGd" customClass="ChecklistTableViewCell" customModule="DreamJournal" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tEl-j0-rGd" id="kOf-M7-Rpd">
@@ -26,17 +26,17 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QpQ-cZ-DOd">
-                                            <rect key="frame" x="16" y="21" width="275" height="58"/>
+                                            <rect key="frame" x="16" y="21" width="276" height="58"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="QpQ-cZ-DOd" firstAttribute="top" secondItem="kOf-M7-Rpd" secondAttribute="topMargin" priority="750" constant="10" id="1fn-Mw-rGR"/>
-                                        <constraint firstItem="QpQ-cZ-DOd" firstAttribute="leading" secondItem="kOf-M7-Rpd" secondAttribute="leading" priority="750" constant="16" id="IgC-NQ-eGf"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="QpQ-cZ-DOd" secondAttribute="bottom" priority="750" constant="10" id="MKa-gr-Xab"/>
-                                        <constraint firstAttribute="trailing" secondItem="QpQ-cZ-DOd" secondAttribute="trailing" priority="750" constant="16" id="zvC-ax-fOL"/>
+                                        <constraint firstItem="QpQ-cZ-DOd" firstAttribute="leading" secondItem="kOf-M7-Rpd" secondAttribute="leadingMargin" id="Enx-Za-TDL"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="QpQ-cZ-DOd" secondAttribute="trailing" constant="7" id="XYe-rO-BfL"/>
+                                        <constraint firstItem="QpQ-cZ-DOd" firstAttribute="top" secondItem="kOf-M7-Rpd" secondAttribute="topMargin" constant="10" id="c9R-vi-qVZ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="QpQ-cZ-DOd" secondAttribute="bottom" constant="10" id="gHG-00-L3p"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -50,11 +50,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Your Dreams" id="Sf8-TE-i5q">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gxM-y0-Qwu">
-                            <connections>
-                                <segue destination="tjf-nn-DV8" kind="show" identifier="AddDreamSegue" id="8Jz-8C-Hdd"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="gxM-y0-Qwu">
+                                <connections>
+                                    <segue destination="tjf-nn-DV8" kind="show" identifier="AddDreamSegue" id="8Jz-8C-Hdd"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Delete" id="uqE-ZF-uD4">
+                                <connections>
+                                    <action selector="deleteItems:" destination="TC2-42-Ewt" id="BVY-hT-GbG"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
@@ -80,7 +87,7 @@
             </objects>
             <point key="canvasLocation" x="-58.399999999999999" y="71.674876847290648"/>
         </scene>
-        <!--Add Dream Table View Controller-->
+        <!--Title-->
         <scene sceneID="FDw-NP-4r3">
             <objects>
                 <tableViewController id="tjf-nn-DV8" customClass="AddDreamTableViewController" customModule="DreamJournal" customModuleProvider="target" sceneMemberID="viewController">
@@ -91,10 +98,10 @@
                         <sections>
                             <tableViewSection id="abr-o7-fTc">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="4mo-Os-JUN">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="4mo-Os-JUN" customClass="ChecklistTableViewCell" customModule="DreamJournal" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="35" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4mo-Os-JUN" id="Dxv-PE-srM">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4mo-Os-JUN" id="Dxv-PE-srM" customClass="ChecklistTableViewCell" customModule="DreamJournal" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -120,13 +127,13 @@
                             <outlet property="delegate" destination="tjf-nn-DV8" id="qsk-c9-o7M"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="KIp-F4-GvW">
+                    <navigationItem key="navigationItem" title="Title" id="KIp-F4-GvW">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="BZS-Tk-tem">
                             <connections>
                                 <action selector="cancel:" destination="tjf-nn-DV8" id="tzB-57-TPh"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Save" id="1LD-GX-1Ia">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Done" id="1LD-GX-1Ia">
                             <connections>
                                 <action selector="done:" destination="tjf-nn-DV8" id="irC-nR-85e"/>
                             </connections>

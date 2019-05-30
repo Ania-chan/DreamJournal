@@ -8,13 +8,7 @@
 
 import Foundation
 
-class DreamItem {
+class DreamItem: NSObject {
     var text = ""
     
-//    init?(text: String) {
-//        if text.isEmpty {
-//            return nil
-//        }
-//        self.text = text
-//    }
 }

@@ -11,6 +11,7 @@ import UIKit
 protocol AddItemViewControllerDelegate: class {
     func addItemViewControllerDidCancel(_ controller: AddDreamTableViewController)
     func addItemViewController(_ controller: AddDreamTableViewController, didFinishAdding item: DreamItem)
+    func addItemViewController(_ controller: AddDreamTableViewController, didFinishEditing item: DreamItem)
 }
 
 class AddDreamTableViewController: UITableViewController {
@@ -24,21 +25,32 @@ class AddDreamTableViewController: UITableViewController {
     @IBOutlet weak var addBarButton: UIBarButtonItem!
     
     @IBAction func cancel(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
         delegate?.addItemViewControllerDidCancel(self)
     }
     
     @IBAction func done(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-        let dream = DreamItem()
-        if let textFieldText = textfield.text {
-            dream.text = textFieldText
+        if let item = dreamToEdit, let text = textfield.text {
+            item.text = text
+            delegate?.addItemViewController(self, didFinishAdding: item)
+        } else {
+            if let item = dreamList?.addDream() {
+                if let textFieldText = textfield.text {
+                    item.text = textFieldText
+                }
+                delegate?.addItemViewController(self, didFinishAdding: item)
+            }
         }
-        delegate?.addItemViewController(self, didFinishAdding: dream)
+        
+    
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let item = dreamToEdit {
+            title = "Edit Dream"
+            textfield.text = item.text
+            addBarButton.isEnabled = true
+        }
         navigationItem.largeTitleDisplayMode = .never
     }
     

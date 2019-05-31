@@ -16,6 +16,7 @@
 		81FB7F30229FA6DE0074A6B3 /* AddDreamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FB7F2F229FA6DE0074A6B3 /* AddDreamTableViewController.swift */; };
 		81FB7F34229FA8BF0074A6B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81FB7F33229FA8BF0074A6B3 /* LaunchScreen.storyboard */; };
 		81FB7F37229FED5F0074A6B3 /* ChecklistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FB7F36229FED5F0074A6B3 /* ChecklistTableViewCell.swift */; };
+		81FB7F3A22A0227C0074A6B3 /* DreamModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81FB7F3822A0227C0074A6B3 /* DreamModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		81FB7F33229FA8BF0074A6B3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81FB7F35229FE2600074A6B3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		81FB7F36229FED5F0074A6B3 /* ChecklistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTableViewCell.swift; sourceTree = "<group>"; };
+		81FB7F3922A0227C0074A6B3 /* DreamModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DreamModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +70,10 @@
 				81FB7F21229E18630074A6B3 /* DreamItem.swift */,
 				81FB7F25229E21FD0074A6B3 /* DreamsList.swift */,
 				815CB7EC229CD5DB0062380A /* Main.storyboard */,
+				81FB7F3822A0227C0074A6B3 /* DreamModel.xcdatamodeld */,
 				81FB7F33229FA8BF0074A6B3 /* LaunchScreen.storyboard */,
-				81FB7F2F229FA6DE0074A6B3 /* AddDreamTableViewController.swift */,
 				815CB7EF229CD5DC0062380A /* Assets.xcassets */,
+				81FB7F2F229FA6DE0074A6B3 /* AddDreamTableViewController.swift */,
 				815CB7FC229CF5B50062380A /* DreamListViewController.swift */,
 				81FB7F36229FED5F0074A6B3 /* ChecklistTableViewCell.swift */,
 				815CB7F4229CD5DC0062380A /* Info.plist */,
@@ -151,6 +154,7 @@
 			files = (
 				815CB7FD229CF5B50062380A /* DreamListViewController.swift in Sources */,
 				815CB7E9229CD5DB0062380A /* AppDelegate.swift in Sources */,
+				81FB7F3A22A0227C0074A6B3 /* DreamModel.xcdatamodeld in Sources */,
 				81FB7F22229E18630074A6B3 /* DreamItem.swift in Sources */,
 				81FB7F30229FA6DE0074A6B3 /* AddDreamTableViewController.swift in Sources */,
 				81FB7F37229FED5F0074A6B3 /* ChecklistTableViewCell.swift in Sources */,
@@ -346,6 +350,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		81FB7F3822A0227C0074A6B3 /* DreamModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				81FB7F3922A0227C0074A6B3 /* DreamModel.xcdatamodel */,
+			);
+			currentVersion = 81FB7F3922A0227C0074A6B3 /* DreamModel.xcdatamodel */;
+			path = DreamModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 815CB7DD229CD5DB0062380A /* Project object */;
 }

@@ -10,5 +10,6 @@ import Foundation
 
 class DreamItem: NSObject {
     var text = ""
+    var content = ""
     
 }

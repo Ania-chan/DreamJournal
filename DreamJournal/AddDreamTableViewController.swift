@@ -23,6 +23,7 @@ class AddDreamTableViewController: UITableViewController {
     @IBOutlet weak var textfield: UITextField!
     @IBOutlet weak var cancelBarButton: UIBarButtonItem!
     @IBOutlet weak var addBarButton: UIBarButtonItem!
+    @IBOutlet weak var textArea: UITextView!
     
     @IBAction func cancel(_ sender: Any) {
         delegate?.addItemViewControllerDidCancel(self)

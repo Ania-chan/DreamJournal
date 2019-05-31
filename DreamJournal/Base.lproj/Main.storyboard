@@ -9,34 +9,43 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Your Dreams-->
+        <!--Your Dreams 🌙 -->
         <scene sceneID="FcE-xw-nus">
             <objects>
                 <tableViewController id="TC2-42-Ewt" customClass="DreamListViewController" customModule="DreamJournal" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qv4-82-AhV">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="81" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qv4-82-AhV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="DreamItem" rowHeight="100" id="tEl-j0-rGd" customClass="ChecklistTableViewCell" customModule="DreamJournal" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="DreamItem" rowHeight="81" id="tEl-j0-rGd" customClass="ChecklistTableViewCell" customModule="DreamJournal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="81"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tEl-j0-rGd" id="kOf-M7-Rpd">
-                                    <rect key="frame" x="0.0" y="0.0" width="307" height="99.666666666666671"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="307" height="80.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QpQ-cZ-DOd">
-                                            <rect key="frame" x="16" y="21" width="276" height="58"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QpQ-cZ-DOd">
+                                            <rect key="frame" x="16" y="11" width="276" height="12"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="800" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHG-6U-LkS">
+                                            <rect key="frame" x="16" y="31" width="276" height="19"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="QpQ-cZ-DOd" firstAttribute="leading" secondItem="kOf-M7-Rpd" secondAttribute="leadingMargin" id="Enx-Za-TDL"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="QpQ-cZ-DOd" secondAttribute="trailing" constant="7" id="XYe-rO-BfL"/>
-                                        <constraint firstItem="QpQ-cZ-DOd" firstAttribute="top" secondItem="kOf-M7-Rpd" secondAttribute="topMargin" constant="10" id="c9R-vi-qVZ"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="QpQ-cZ-DOd" secondAttribute="bottom" constant="10" id="gHG-00-L3p"/>
+                                        <constraint firstItem="rHG-6U-LkS" firstAttribute="top" secondItem="QpQ-cZ-DOd" secondAttribute="bottom" constant="8" id="CcI-hW-T1z"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="QpQ-cZ-DOd" secondAttribute="trailing" constant="7" id="bVo-N1-Zv5"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="rHG-6U-LkS" secondAttribute="trailing" constant="7" id="ic6-oe-hGP"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="rHG-6U-LkS" secondAttribute="bottom" constant="20" id="nYy-jx-XfR"/>
+                                        <constraint firstItem="rHG-6U-LkS" firstAttribute="leading" secondItem="kOf-M7-Rpd" secondAttribute="leadingMargin" id="ukx-Ux-6wd"/>
+                                        <constraint firstItem="QpQ-cZ-DOd" firstAttribute="top" secondItem="kOf-M7-Rpd" secondAttribute="topMargin" id="yHc-fd-TMM"/>
+                                        <constraint firstItem="QpQ-cZ-DOd" firstAttribute="leading" secondItem="kOf-M7-Rpd" secondAttribute="leadingMargin" id="yTV-fX-k6K"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -49,7 +58,7 @@
                             <outlet property="delegate" destination="TC2-42-Ewt" id="3Hr-Nr-6Nb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Your Dreams" id="Sf8-TE-i5q">
+                    <navigationItem key="navigationItem" title="Your Dreams 🌙 " id="Sf8-TE-i5q">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="gxM-y0-Qwu">
                                 <connections>
@@ -87,7 +96,7 @@
             </objects>
             <point key="canvasLocation" x="-58.399999999999999" y="71.674876847290648"/>
         </scene>
-        <!--Title-->
+        <!--New Dream 🌟-->
         <scene sceneID="FDw-NP-4r3">
             <objects>
                 <tableViewController id="tjf-nn-DV8" customClass="AddDreamTableViewController" customModule="DreamJournal" customModuleProvider="target" sceneMemberID="viewController">
@@ -99,7 +108,7 @@
                             <rect key="frame" x="0.0" y="97" width="375" height="627"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                         <sections>
@@ -116,7 +125,7 @@
                                                     <rect key="frame" x="20" y="10.000000000000002" width="335" height="23.666666666666671"/>
                                                     <accessibility key="accessibilityConfiguration" label="Title"/>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
                                                         <action selector="done:" destination="tjf-nn-DV8" eventType="editingDidEndOnExit" id="tC1-rp-4eB"/>
@@ -140,7 +149,7 @@
                             <outlet property="delegate" destination="tjf-nn-DV8" id="qsk-c9-o7M"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="KIp-F4-GvW">
+                    <navigationItem key="navigationItem" title="New Dream 🌟" id="KIp-F4-GvW">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="BZS-Tk-tem">
                             <connections>
                                 <action selector="cancel:" destination="tjf-nn-DV8" id="tzB-57-TPh"/>

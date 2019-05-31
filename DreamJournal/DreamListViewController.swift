@@ -76,8 +76,9 @@ class DreamListViewController: UITableViewController {
     }
     
     func configureText(for cell: UITableViewCell, with item: DreamItem) {
-        if let label = cell.viewWithTag(1000) as? UILabel {
+        if let label = cell.viewWithTag(1000) as? UILabel, let content = cell.viewWithTag(800) as? UILabel {
             label.text = item.text
+            content.text = item.content
         }
     }
     
@@ -98,8 +99,6 @@ class DreamListViewController: UITableViewController {
             }
         }
     }
-
-    
 }
 
 extension DreamListViewController: AddItemViewControllerDelegate {

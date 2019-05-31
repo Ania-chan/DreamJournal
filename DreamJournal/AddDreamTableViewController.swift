@@ -30,26 +30,27 @@ class AddDreamTableViewController: UITableViewController {
     }
     
     @IBAction func done(_ sender: Any) {
-        if let item = dreamToEdit, let text = textfield.text {
+        if let item = dreamToEdit, let text = textfield.text, let textfieldInput = textArea.text {
             item.text = text
+            item.content = textfieldInput
             delegate?.addItemViewController(self, didFinishAdding: item)
         } else {
             if let item = dreamList?.addDream() {
-                if let textFieldText = textfield.text {
+                if let textFieldText = textfield.text, let textfieldInput = textArea.text {
                     item.text = textFieldText
+                    item.content = textfieldInput
                 }
                 delegate?.addItemViewController(self, didFinishAdding: item)
             }
         }
-        
-    
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         if let item = dreamToEdit {
-            title = "Edit Dream"
+            title = "Edit Dream 🌟"
             textfield.text = item.text
+            textArea.text = item.content
             addBarButton.isEnabled = true
         }
         navigationItem.largeTitleDisplayMode = .never

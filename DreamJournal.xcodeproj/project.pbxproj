@@ -17,7 +17,7 @@
 		81FB7F34229FA8BF0074A6B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81FB7F33229FA8BF0074A6B3 /* LaunchScreen.storyboard */; };
 		81FB7F37229FED5F0074A6B3 /* ChecklistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FB7F36229FED5F0074A6B3 /* ChecklistTableViewCell.swift */; };
 		81FB7F3A22A0227C0074A6B3 /* DreamModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81FB7F3822A0227C0074A6B3 /* DreamModel.xcdatamodeld */; };
-		81FB7F9922A0EDF80074A6B3 /* screen-capture.png in Resources */ = {isa = PBXBuildFile; fileRef = 81FB7F9822A0EDF80074A6B3 /* screen-capture.png */; };
+		81FB7F9922A0EDF80074A6B3 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 81FB7F9822A0EDF80074A6B3 /* screen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,7 @@
 		81FB7F35229FE2600074A6B3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		81FB7F36229FED5F0074A6B3 /* ChecklistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTableViewCell.swift; sourceTree = "<group>"; };
 		81FB7F3922A0227C0074A6B3 /* DreamModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DreamModel.xcdatamodel; sourceTree = "<group>"; };
-		81FB7F9822A0EDF80074A6B3 /* screen-capture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "screen-capture.png"; path = "../../../Desktop/screen-capture.png"; sourceTree = "<group>"; };
+		81FB7F9822A0EDF80074A6B3 /* screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = screen.png; path = ../../../Desktop/screen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 		815CB7DC229CD5DB0062380A = {
 			isa = PBXGroup;
 			children = (
-				81FB7F9822A0EDF80074A6B3 /* screen-capture.png */,
+				81FB7F9822A0EDF80074A6B3 /* screen.png */,
 				81FB7F35229FE2600074A6B3 /* README.md */,
 				815CB7E7229CD5DB0062380A /* DreamJournal */,
 				815CB7E6229CD5DB0062380A /* Products */,
@@ -144,7 +144,7 @@
 			files = (
 				81FB7F34229FA8BF0074A6B3 /* LaunchScreen.storyboard in Resources */,
 				815CB7F0229CD5DC0062380A /* Assets.xcassets in Resources */,
-				81FB7F9922A0EDF80074A6B3 /* screen-capture.png in Resources */,
+				81FB7F9922A0EDF80074A6B3 /* screen.png in Resources */,
 				815CB7EE229CD5DB0062380A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

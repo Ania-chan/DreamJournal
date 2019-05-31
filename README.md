@@ -8,7 +8,7 @@ This was created during my time as a student at Code Chrysalis as a five-day sol
 * Xcode Version 10.2.1 
 * iOS Version 12.2 (Swift 5)
 
-![Screenshot](screen-capture.png)
+![Screenshot](screen.png)
 
 ### License
 
